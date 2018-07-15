@@ -1,0 +1,5 @@
+  public void accept(View view) {
+        EditText ed1=(EditText)findViewById(R.id.ed1);
+    int age=Integer.parseInt(ed1.getText().toString());
+        Toast.makeText(this,"your age is :"+String.valueOf(age),Toast.LENGTH_LONG).show();
+    }

@@ -1,0 +1,22 @@
+ 
+
+Methode 1:
+
+public void b1(View view) {
+
+    \\Do somthing        
+    }
+
+
+
+Methode 2:
+
+
+        Button b1=(Button)findViewById(R.id.b1);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+           
+   \\Do somthing     
+            }
+        });

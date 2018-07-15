@@ -1,0 +1,3 @@
+    final   Button b1=(Button)findViewById(R.id.b1);
+
+       b1.setText("you clicked me :-( ");

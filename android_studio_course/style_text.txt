@@ -1,0 +1,27 @@
+example, if you define the following style:
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <style name="GreenText" parent="TextAppearance.AppCompat">
+  
+      <item name="android:textColor">#00FF00</item>
+   
+        </style>
+
+
+
+</resources>
+You can apply the style to a view as follows:
+
+
+
+<TextView
+    style="@style/GreenText"
+    ... />
+
+
+Each attribute specified in the style is applied to that view if the view accepts it.
+ The view simply ignores any attributes that it does not accept.
