@@ -1,5 +1,0 @@
-                                   Deprecated in Android
-
-
-google 
-    getcolor is Deprecated

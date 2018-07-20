@@ -1,0 +1,53 @@
+         
+
+ // xml code  :
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/goback"
+        android:icon="@drawable/a3"
+        android:title="my profil"
+        app:showAsAction="ifRoom"
+        tools:ignore="MenuTitle"
+    />
+
+    <item
+        android:id="@+id/go"
+        android:icon="@drawable/a3"
+        android:title="my profil"
+        app:showAsAction="ifRoom"
+        tools:ignore="MenuTitle"
+        />
+
+</menu>
+
+
+
+
+
+
+java code (just 2 item) :
+
+
+  @Override
+    public boolean onCreateOptionsMenu(Menu Menu) {
+           getMenuInflater().inflate(R.menu.main_activity_menu,Menu);
+           return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+     int id =item.getItemId();
+
+        if(id==R.id.goback)
+        {
+            Toast.makeText(this,"welcome to my profile",Toast.LENGTH_LONG).show();
+        }
+
+       return super.onOptionsItemSelected(item);
+    }

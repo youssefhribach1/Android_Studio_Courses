@@ -1,6 +1,0 @@
-Supporting Multiple Screens :
-
-1)- click sur votre activity
-2)- orientition in edition
-3)- create landerscape ver...
- 
