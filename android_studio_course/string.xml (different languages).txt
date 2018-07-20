@@ -1,0 +1,39 @@
+               
+1)
+
+<resources>
+    <string name="app_name">languages</string>
+    <string name="test1">welcome</string>
+    <string name="youssef">languages</string>
+</resources>
+
+2)
+
+<string-array name="jobs">
+<item>developer</item>
+<item>system admin</item>
+</string-array>
+
+
+----------------------------------------------
+called by 
+
+ android:text="@string/app_name"
+
+-------------------------------------------
+// Get a string resource from your app's Resources
+
+String hello = getResources().getString(R.string.hello_world);
+String[]hello = getResources().getStringArray(R.Array.hello_world);
+
+// Or supply a string resource to a method that requires a string
+
+TextView textView = new TextView(this);
+textView.setText(R.string.hello_world);
+-------------------------------------------------
+
+click droit sur le dossier value est choisir nouvelle est ajouter values resources file
+1-strings
+2-values/ar or value/en or ...
+...
+
