@@ -1,0 +1,105 @@
+code  XML :
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/facebook"
+        android:icon="@drawable/fb"
+        android:title="facebook"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/sh"
+        android:title="share"
+        app:showAsAction="always"
+        tools:ignore="DuplicateIds,MenuTitle" />
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_1"
+            android:title="my profile"
+            />
+
+        <item
+            android:id="@+id/item_2"
+            android:title="my profile"
+            />
+
+    </group>
+
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/sh"
+        android:title="Exit"
+
+        tools:ignore="DuplicateIds,MenuTitle" />
+
+</menu>
+
+
+
+
+
+code JAVA :
+
+
+package com.example.thenewjoseph.menu_02;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu Menu) {
+        MenuInflater mymenu=getMenuInflater();
+        getMenuInflater().inflate(R.menu.main_activity_menu,Menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.facebook) {
+            Toast.makeText(this, "facebook", Toast.LENGTH_LONG).show();
+        }
+
+        if (id == R.id.share) {
+            Toast.makeText(this, "share", Toast.LENGTH_LONG).show();
+        }
+
+        if (id == R.id.item_1) {
+            Toast.makeText(this, "item 1", Toast.LENGTH_LONG).show();
+        }
+
+        if (id == R.id.item_2) {
+            Toast.makeText(this, "item 2", Toast.LENGTH_LONG).show();
+        }
+
+        if (id == R.id.exit) {
+           this.finish();
+        }
+
+
+        return super.onOptionsItemSelected(item);
+
+    }}
